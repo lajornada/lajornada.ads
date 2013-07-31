@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="lajornada.ads">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <includeDependencies package="." />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="lajornada.ads"
+      directory="profiles/default"
+      description="Installs the lajornada.ads package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <!-- -*- extra stuff goes here -*- -->
+
+    <include package="plone.app.registry" />
+
+    <!-- Control panel -->
+    <browser:page
+        name="akismet-settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.AkismetSettingsControlPanel"
+        permission="cmf.ManagePortal"
+        />
+</configure>
