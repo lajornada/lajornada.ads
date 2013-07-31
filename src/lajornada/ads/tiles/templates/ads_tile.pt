@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  </head>
+  <body>
+   <div id="iab rectangle">
+     <script type="text/javascript">
+    <span tal:replace="python:context.portal_registry['lajornada.ads.interfaces.AdsSettings.adsBanner01']">content title or id</span>
+    </script>    
+</div>
+ <div id="iab rectangle">
+     <script type="text/javascript">
+    <span tal:replace="python:context.portal_registry['lajornada.ads.interfaces.AdsSettings.adsBanner02']">content title or id</span>
+    </script>  
+ </div> 
+ <div id="iab rectangle">
+     <script type="text/javascript">
+ <span tal:replace="python:context.portal_registry['lajornada.ads.interfaces.AdsSettings.adsBanner03']">content title or id</span>
+    </script> 
+</div>
+ <div id="iab rectangle">
+     <script type="text/javascript">
+ <span tal:replace="python:context.portal_registry['lajornada.ads.interfaces.AdsSettings.adsBanner04']">content title or id</span>
+    </script> 
+</div>
+   
+  </body>
+</html>

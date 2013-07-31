@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="lajornada.ads">
+        <plone:tile
+        name="lajornada.tile.ads"
+        title="Publicidad"
+        description="Tile for ads"
+        add_permission="cmf.ModifyPortalContent"
+        schema=".ads_tile.IAds"
+        class=".ads_tile.Ads"
+        permission="zope2.View"
+        for="*"
+        i18n:attributes="title;description"
+        />
+</configure>
